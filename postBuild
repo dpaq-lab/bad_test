@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Enable Jupyter extensions if needed
+jupyter nbextension enable --py --sys-prefix widgetsnbextension
+
+# Copy data files to AIF360 expected location
+mkdir -p /srv/conda/envs/notebook/lib/python3.9/site-packages/aif360/data/raw/adult
+cp data/adult/* /srv/conda/envs/notebook/lib/python3.9/site-packages/aif360/data/raw/adult/
+
+echo "Binder environment setup complete!"
+
+
+# Install additional system dependencies if needed for AIF360
+# (This script runs after pip install requirements.txt)
+
+echo "Binder environment setup complete!"
